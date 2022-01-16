@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"><style>html,body,#m_viewDiv{padding:0;margin:0;height:100%;width:100%}#m_seasons-filter{height:160px;width:100%}.m_season-item{width:100%;padding:12px;text-align:center;vertical-align:baseline;height:40px}.m_season-item:hover{background-color:dimgrey}#m_titleDiv{padding:10px}#m_letsgo{display:block;width:150px;margin:10px auto;text-align:center;background-color:#0f72e5;border-radius:20px;color:#ffffff;text-decoration:none;padding:8px 0}#m_crops-filter{width:275px;font-family:Avenir Next W00;font-size:1em;text-align:center}#m_year-filter{width:275px;font-family:Avenir Next W00;font-size:1em;text-align:center}#m_query{width:275px;font-family:Avenir Next W00;font-size:1em}#m_titleText{font-size:20pt;font-weight:60;padding-bottom:10px}.m_popup{background-color:#ffffff;width:420px;padding:30px 40px;border-radius:8px;display:none;font-family:"Poppins",sans-serif;text-align:center}.m_popup h2{}.m_popup p{font-size:14px;text-align:justify;margin:20px 0;line-height:25px}.m_popup button{display:block;margin:0 0 20px auto;background-color:transparent;font-size:30px;color:#ffffff;background:#03549a;border-radius:100%;width:40px;height:40px;border:none;outline:none}</style></head><body>
+  
+    
+    
+    
+
+    
+    
+
+    
+    
+  
+
+  <div>
+    <div id="m_viewDiv"></div>
+    <div id="m_popup" class="m_popup">
+          <button id="m_close">×</button>
+          <h2>Agricultural Crop Yields</h2>
+          <p>The goal of this project was to create and automate an Extract, Transform, and Load (ETL) 
+            workflow that ultimately combines worldwide agricultural data into a format that can be used 
+            to predict crop yields using machine learning. The resulting, combined dataset is a geographically 
+            enabled dataset that can be updated with the latest data at any time. The workflow and subsequent 
+            tools are currently restricted to the years 1960 through 2019 and only the countries around the 
+            world that have data available from the Food and Agriculture Organization (FAO) and the World Bank. 
+            This web app shows the countries around the globe that have data available.<br><br>
+          <a href="https://www.google.com/url?q=https://github.com/jbon1414/ETL-Food-and-Ag/blob/main/ETL%2520Food%2520and%2520Ag%2520Data%2520(In%2520Progress).ipynb&amp;source=gmail-html&amp;ust=1642057981263000&amp;usg=AOvVaw2pKZotC_lNB0OefmWYGXbI" target="_blank" rel="noreferrer">
+          Jupyter Notebook Containing Python Code</a><br>
+          <a href="https://www.google.com/url?q=https://github.com/jbon1414/ETL-Food-and-Ag/blob/main/FinalCapstonePaper__JB.pdf&amp;source=gmail-html&amp;ust=1642057981263000&amp;usg=AOvVaw32A64H95WHHBJhedhr8xsU" target="_blank" rel="noreferrer">
+            Paper with more information regarding this project</a></p>
+          <a id="m_letsgo" href="#m__" rel="noreferrer">Let&#39;s Go</a>
+      </div>
+    <div id="m_titleDiv" class="m_esri-widget">
+      
+      <div id="m_titleText">Agricultural Crop Yields</div>
+      <div>1961 - 2020</div>
+      <select id="m_crops-filter" class="m_esri-widget">
+        <option class="m_season-item m_visible-season">Maize</option>
+        <option class="m_season-item m_visible-season">Potatoes</option>
+        <option class="m_season-item m_visible-season">Rice</option>
+        <option class="m_season-item m_visible-season">Wheat</option>
+        <option class="m_season-item m_visible-season">Soybeans</option>
+        <option class="m_season-item m_visible-season">Sorghum</option>
+        <option class="m_season-item m_visible-season">Yams</option>
+      </select>
+      <select id="m_year-filter" class="m_esri-widget">
+        <option>2019</option>
+        <option>2018</option>
+        <option>2017</option>
+        <option>2016</option>
+        <option>2015</option>
+        <option>2014</option>
+        <option>2013</option>
+        <option>2012</option>
+        <option>2011</option>
+        <option>2010</option>
+        <option>2009</option>
+        <option>2008</option>
+        <option>2007</option>
+        <option>2006</option>
+        <option>2005</option>
+        <option>2004</option>
+        <option>2003</option>
+        <option>2002</option>
+        <option>2001</option>
+        <option>2000</option>
+        <option>1999</option>
+        <option>1998</option>
+        <option>1997</option>
+        <option>1996</option>
+        <option>1995</option>
+        <option>1994</option>
+        <option>1993</option>
+        <option>1992</option>
+        <option>1991</option>
+        <option>1990</option>
+        <option>1989</option>
+        <option>1988</option>
+        <option>1987</option>
+        <option>1986</option>
+        <option>1985</option>
+        <option>1984</option>
+        <option>1983</option>
+        <option>1982</option>
+        <option>1981</option>
+        <option>1980</option>
+        <option>1979</option>
+        <option>1978</option>
+        <option>1977</option>
+        <option>1976</option>
+        <option>1975</option>
+        <option>1974</option>
+        <option>1973</option>
+        <option>1972</option>
+        <option>1971</option>
+        <option>1970</option>
+        <option>1969</option>
+        <option>1968</option>
+        <option>1967</option>
+        <option>1966</option>
+        <option>1965</option>
+        <option>1964</option>
+        <option>1963</option>
+        <option>1962</option>
+        <option>1961</option>
+      </select>
+      <button id="m_query" style="font-weight:bold">Query</button>
+    </div>
+  </div>
+</body></html>
