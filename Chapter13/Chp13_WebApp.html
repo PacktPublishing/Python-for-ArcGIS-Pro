@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <title>Agricultural Crop Yields</title>
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.21/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.21/"></script>
+  </head>
+  <style>
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+    #titleDiv {
+      padding: 10px;
+    }
+  </style>
+  <script>
+    require([
+      "esri/views/MapView",
+      "esri/Map",
+      "esri/layers/FeatureLayer",
+      "esri/Basemap",
+    ], (MapView, Map, FeatureLayer, Basemap) => {
+        const basemap = new Basemap({
+          portalItem: {
+            id: "4f2e99ba65e34bb8af49733d9778fb8e"
+          }
+        });
+        // agricultural crop yield layer queried at start
+        const layer = new FeatureLayer({
+          portalItem: {
+            id: "3252811b3f3047298024a8047bcc3b57" 
+          },
+          definitionExpression: "Item = 'Maize' AND Year = '2019'",
+          popupTemplate: createPopupTemplate()
+        });
+
+         //popup template 
+         function createPopupTemplate(){
+          return {
+            title: "{country}, {Year}",
+            content: [{
+              type: "fields",
+              fieldInfos: [{
+                fieldName: "Item",
+                label: "Crop",
+              }, {
+               fieldName: "yield_tonn",
+               label: "Yield",
+               format: {
+                 places: 2,
+                 digitSeparator: true
+               }
+              }]
+            }]
+          };
+        };
+
+        const map = new Map({
+          basemap: basemap,
+          layers: [layer]
+        });
+         const view = new MapView({
+          map: map,
+          container: "viewDiv"
+        });
+        view.ui.add("titleDiv", "top-right");
+
+      });
+  </script>
+  <body>
+      <div id="viewDiv"></div>
+      <div id="titleDiv" class="esri-widget">
+          <div id="titleText">Agricultural Crop Yields</div>
+        </div>
+  </body>
+</html>
